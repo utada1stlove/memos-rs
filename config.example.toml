@@ -1,0 +1,19 @@
+[server]
+host = "127.0.0.1"
+port = 5230
+
+[logging]
+level = "info"
+
+[database]
+kind = "sqlite"
+url = "sqlite://./data/memos-rs.db"
+max_connections = 5
+
+[auth]
+jwt_secret = "change-me-in-production"
+jwt_issuer = "memos-rs"
+token_ttl_seconds = 86400
+
+[frontend]
+static_dir = "./frontend/dist"
